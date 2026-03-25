@@ -14,6 +14,8 @@ spec:
     - file:
         path: common
     - file:
+        path: core
+    - file:
         path: bottom_toolbar/api/v1alpha1/pysrc
     - file:
         path: bottom_toolbar/intents
@@ -31,7 +33,7 @@ spec:
         path: bottom_toolbar/crds/bottom-toolbar.eda.labs_bottomtoolbars.yaml
         schema: bottom_toolbar/openapiv3/eda_oas_bottom-toolbar.eda.labs_bottomtoolbars.json
         ui:
-          category: Bottom Toolbar
+          category: Management
           name: Bottom Toolbars
     - script:
         path: bottom_toolbar/intents/bottomtoolbar/config_intent.py
