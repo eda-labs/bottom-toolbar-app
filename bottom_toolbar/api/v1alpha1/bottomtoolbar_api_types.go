@@ -16,11 +16,12 @@ limitations under the License.
 
 package v1alpha1
 
-// BottomToolbarSpec defines the desired state of BottomToolbar
+// Bottom Toolbar Specification.
 type BottomToolbarSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - define desired state of cluster
-	// Important: Run "edabuilder generate" to regenerate code after modifying this file
-	Foo string `json:"foo"`
+	// Message to display in the bottom toolbar.
+	// +kubebuilder:validation:Required
+	// +eda:ui:title="Message to display in the bottom toolbar"
+	Message string `json:"message"`
 }
 
 // BottomToolbarStatus defines the observed state of BottomToolbar

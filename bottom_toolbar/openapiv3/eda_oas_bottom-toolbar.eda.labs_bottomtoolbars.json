@@ -14,16 +14,17 @@
       "type": "object"
     },
     "spec": {
-      "description": "BottomToolbarSpec defines the desired state of BottomToolbar",
+      "description": "Bottom Toolbar Specification.",
       "type": "object",
       "title": "Specification",
       "required": [
-        "foo"
+        "message"
       ],
       "properties": {
-        "foo": {
-          "description": "INSERT ADDITIONAL SPEC FIELDS - define desired state of cluster\nImportant: Run \"edabuilder generate\" to regenerate code after modifying this file",
-          "type": "string"
+        "message": {
+          "description": "Message to display in the bottom toolbar.",
+          "type": "string",
+          "title": "Message to display in the bottom toolbar"
         }
       },
       "x-eda-nokia-com": {

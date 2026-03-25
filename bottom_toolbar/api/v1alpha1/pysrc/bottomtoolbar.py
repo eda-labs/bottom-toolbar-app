@@ -6,7 +6,7 @@ import eda_common as eda
 from . import Metadata, Y_NAME
 
 from .constants import *
-Y_FOO = 'foo'
+Y_MESSAGE = 'message'
 Y_RESULT = 'result'
 # Package objects (GVK Schemas)
 BOTTOMTOOLBAR_SCHEMA = eda.Schema(group='bottom-toolbar.eda.labs', version='v1alpha1', kind='BottomToolbar')
@@ -15,22 +15,22 @@ BOTTOMTOOLBAR_SCHEMA = eda.Schema(group='bottom-toolbar.eda.labs', version='v1al
 class BottomToolbarSpec:
     def __init__(
         self,
-        foo: str,
+        message: str,
     ):
-        self.foo = foo
+        self.message = message
 
     def to_input(self):  # pragma: no cover
         _rval = {}
-        if self.foo is not None:
-            _rval[Y_FOO] = self.foo
+        if self.message is not None:
+            _rval[Y_MESSAGE] = self.message
         return _rval
 
     @staticmethod
     def from_input(obj) -> 'BottomToolbarSpec | None':
         if obj:
-            _foo = obj.get(Y_FOO)
+            _message = obj.get(Y_MESSAGE)
             return BottomToolbarSpec(
-                foo=_foo,
+                message=_message,
             )
         return None  # pragma: no cover
 
