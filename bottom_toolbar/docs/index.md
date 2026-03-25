@@ -6,38 +6,28 @@
 | -------------------- |-----------------------------------------|
 | **Group/Version**    | -{{ app_group }}-/-{{ app_api_version }}-   |
 | **Supported OS**     | -{{ supported_os_versions() }}-  |
-| **Catalog**          | [eda-labs/catalog/bottom-toolbar ][manifest] |
+| **Catalog**          | [eda-labs/catalog/bottom-toolbar][manifest] |
 | **Source Code**      | <small>coming soon</small>              |
 
-[//]: # (Note: you should fill in the hyperlink to your published manifest in your public catalog)
-[manifest]: https://docs.eda.dev/
+[manifest]: https://github.com/eda-labs/catalog/blob/apps/bottom-toolbar.eda.labs/v0.0.0/apps/bottom-toolbar.eda.labs/manifest.yaml
 
-This is where the description of your app starts.
+An app to set the bottom toolbar of the SR Linux nodes to a user-provided message.
 
-The application provides the following components:
+## Install
 
-/// tab | Resources
+Add the `eda-labs` catalog to your EDA instance:
 
-<div class="grid" markdown>
-<div markdown>
+```yaml
+apiVersion: appstore.eda.nokia.com/v1
+kind: Catalog
+metadata:
+  name: eda-labs-catalog
+  namespace: eda-system
+spec:
+  remoteType: git
+  remoteURL: https://github.com/eda-labs/catalog.git
+  skipTLSVerify: false
+  title: EDA Labs Catalog
+```
 
-* Resource 1
-
-</div>
-<div markdown>
-
-* Resource 2
-
-</div>
-</div>
-///
-
-/// tab | Workflows
-<div class="grid" markdown>
-<div markdown>
-
-* Workflow 1
-
-</div>
-</div>
-///
+And install the Bootom Toolbar app from it. The **Bottom Toolbars** resource group will be available in the **Management** category.
