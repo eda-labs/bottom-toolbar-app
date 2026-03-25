@@ -1,0 +1,22 @@
+apiVersion: core.eda.nokia.com/v1
+kind: Manifest
+metadata:
+  name: bottom-toolbar
+spec:
+  appInfo:
+    categories:
+    - uncategorised
+    documentation: bottom_toolbar/docs
+  author: eda-labs
+  dependencies:
+  - file:
+      path: utils
+  - file:
+      path: common
+  description: Sample description
+  group: bottom-toolbar.eda.labs
+  image: ghcr.io/eda-labs/bottom-toolbar:v0.0.0
+  supportedCoreVersions:
+  - v4.0.0-0
+  title: Bottom Toolbar
+  version: v1alpha1
