@@ -15,6 +15,8 @@ spec:
         path: common
     - file:
         path: bottom_toolbar/api/v1alpha1/pysrc
+    - file:
+        path: bottom_toolbar/intents
   description: Sample description
   group: bottom-toolbar.eda.labs
   image: ghcr.io/eda-labs/bottom-toolbar:v0.0.0
@@ -31,3 +33,8 @@ spec:
         ui:
           category: Bottom Toolbar
           name: Bottom Toolbars
+    - script:
+        path: bottom_toolbar/intents/bottomtoolbar/config_intent.py
+        trigger:
+          kind: BottomToolbar
+        type: config
