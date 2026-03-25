@@ -24,7 +24,7 @@ spec:
         path: bottom_toolbar/intents
   description: Set some crazy message in the CLI's bottom toolbar of the SR Linux nodes.
   group: bottom-toolbar.eda.labs
-  image: ghcr.io/eda-labs/bottom-toolbar:v0.0.0
+  image: ghcr.io/eda-labs/bottom-toolbar:v0.1.0
   supportedCoreVersions:
     - v4.0.0-0
     - v5.0.0-0
