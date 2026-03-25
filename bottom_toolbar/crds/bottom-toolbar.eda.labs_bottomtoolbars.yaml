@@ -1,0 +1,63 @@
+---
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  annotations:
+    controller-gen.kubebuilder.io/version: v0.19.0
+  name: bottomtoolbars.bottom-toolbar.eda.labs
+spec:
+  group: bottom-toolbar.eda.labs
+  names:
+    kind: BottomToolbar
+    listKind: BottomToolbarList
+    plural: bottomtoolbars
+    singular: bottomtoolbar
+  scope: Namespaced
+  versions:
+  - name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        description: BottomToolbar is the Schema for the bottomtoolbars API
+        properties:
+          apiVersion:
+            description: |-
+              APIVersion defines the versioned schema of this representation of an object.
+              Servers should convert recognized schemas to the latest internal value, and
+              may reject unrecognized values.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+            type: string
+          kind:
+            description: |-
+              Kind is a string value representing the REST resource this object represents.
+              Servers may infer this from the endpoint the client submits requests to.
+              Cannot be updated.
+              In CamelCase.
+              More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+            type: string
+          metadata:
+            type: object
+          spec:
+            description: BottomToolbarSpec defines the desired state of BottomToolbar
+            properties:
+              foo:
+                description: |-
+                  INSERT ADDITIONAL SPEC FIELDS - define desired state of cluster
+                  Important: Run "edabuilder generate" to regenerate code after modifying this file
+                type: string
+            required:
+            - foo
+            type: object
+          status:
+            description: BottomToolbarStatus defines the observed state of BottomToolbar
+            properties:
+              result:
+                description: |-
+                  INSERT ADDITIONAL STATUS FIELDS - define observed state of cluster
+                  Important: Run "edabuilder generate" to regenerate code after modifying this file
+                type: string
+            type: object
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}

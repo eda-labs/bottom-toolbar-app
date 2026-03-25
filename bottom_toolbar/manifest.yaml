@@ -5,18 +5,29 @@ metadata:
 spec:
   appInfo:
     categories:
-    - uncategorised
+      - uncategorised
     documentation: bottom_toolbar/docs
   author: eda-labs
   dependencies:
-  - file:
-      path: utils
-  - file:
-      path: common
+    - file:
+        path: utils
+    - file:
+        path: common
+    - file:
+        path: bottom_toolbar/api/v1alpha1/pysrc
   description: Sample description
   group: bottom-toolbar.eda.labs
   image: ghcr.io/eda-labs/bottom-toolbar:v0.0.0
   supportedCoreVersions:
-  - v4.0.0-0
+    - v4.0.0-0
   title: Bottom Toolbar
   version: v1alpha1
+  components:
+    - crd:
+        api:
+          expose: readWrite
+        path: bottom_toolbar/crds/bottom-toolbar.eda.labs_bottomtoolbars.yaml
+        schema: bottom_toolbar/openapiv3/eda_oas_bottom-toolbar.eda.labs_bottomtoolbars.json
+        ui:
+          category: Bottom Toolbar
+          name: Bottom Toolbars
