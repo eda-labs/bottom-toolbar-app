@@ -3,7 +3,6 @@ import json
 
 import eda_common as eda
 
-import utils.schema as s
 from bottom_toolbar.api.v1alpha1.pysrc.bottomtoolbar import BottomToolbar
 from common.metadata import Y_METADATA, Y_NAME
 from core.pysrc import nodeconfig
@@ -33,7 +32,7 @@ class SrlBaseConfigHandler:
         eda.update_cr(**node_config.to_input())
 
     def _generate_config(self, cr_obj: BottomToolbar) -> list[NodeConfigTupleSpec]:
-        configs = []
+        configs: list[NodeConfigTupleSpec] = []
         # cli config (in .system.cli context)
         _config = {}
 
@@ -41,11 +40,11 @@ class SrlBaseConfigHandler:
             _config.setdefault("cli", {}).setdefault("environment", {})["bottom-toolbar"] = cr_obj.spec.message
 
         configs.append(
-            {
-                "path": ".system",
-                "config": json.dumps(_config),
-                "operation": "Create",
-            },
+            NodeConfigTupleSpec(
+                path=".system",
+                operation="Create",
+                config=json.dumps(_config),
+            ),
         )
 
         return configs

@@ -24,7 +24,7 @@
         "message": {
           "description": "Message to display in the bottom toolbar.",
           "type": "string",
-          "title": "Message to display in the bottom toolbar"
+          "title": "Message"
         }
       },
       "x-eda-nokia-com": {

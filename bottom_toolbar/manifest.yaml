@@ -5,9 +5,12 @@ metadata:
 spec:
   appInfo:
     categories:
-      - uncategorised
+      - networking
     documentation: bottom_toolbar/docs
   author: eda-labs
+  supportedEndpoints:
+    - "srl:25.*.*"
+    - "srl:26.*.*"
   dependencies:
     - file:
         path: utils
@@ -19,11 +22,12 @@ spec:
         path: bottom_toolbar/api/v1alpha1/pysrc
     - file:
         path: bottom_toolbar/intents
-  description: Sample description
+  description: Set some crazy message in the CLI's bottom toolbar of the SR Linux nodes.
   group: bottom-toolbar.eda.labs
   image: ghcr.io/eda-labs/bottom-toolbar:v0.0.0
   supportedCoreVersions:
     - v4.0.0-0
+    - v5.0.0-0
   title: Bottom Toolbar
   version: v1alpha1
   components:

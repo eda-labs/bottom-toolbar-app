@@ -20,7 +20,7 @@ package v1alpha1
 type BottomToolbarSpec struct {
 	// Message to display in the bottom toolbar.
 	// +kubebuilder:validation:Required
-	// +eda:ui:title="Message to display in the bottom toolbar"
+	// +eda:ui:title="Message"
 	Message string `json:"message"`
 }
 

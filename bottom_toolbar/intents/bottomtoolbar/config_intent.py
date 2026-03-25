@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
-import eda_common as eda
-
-import bottom_toolbar.api.v1alpha1.pysrc.constants as c
-import utils.exceptions as e
 import utils.node_utils as nutils
 from bottom_toolbar.api.v1alpha1.pysrc.bottomtoolbar import BottomToolbar
 from bottom_toolbar.intents.bottomtoolbar.handlers import get_config_handler
 from bottom_toolbar.intents.bottomtoolbar.init import init_globals_defaults, validate
-from common.constants import PLATFORM_SRL, PLATFORM_SROS
+from common.constants import PLATFORM_SRL
 from common.metadata import Y_METADATA, Y_NAME
 from utils.log import log_msg
 
