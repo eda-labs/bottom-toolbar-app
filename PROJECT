@@ -1,0 +1,5 @@
+builderVersion: v0.0.0
+domain: eda.labs
+name: bottom-toolbar-app
+registry: ghcr.io/eda-labs
+vendor: eda-labs
